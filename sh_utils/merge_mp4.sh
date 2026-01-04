@@ -1,6 +1,7 @@
 #!/bin/bash
 # Example usage:
 # . merge_mp4.sh ./Tst\ dir/ output.mp4
+# . merge_mp4.sh "/path/to/smth/" "output_filename.mp4"
 
 echo "Passed Directory: $1"
 echo "Passed Output Filename: $2"
@@ -17,7 +18,7 @@ esac
 
 echo "Checking ffmpeg version ..."
 if ! command -v ffmpeg &> /dev/null; then
-    echo "FFmpeg is not installed. Please install it and try again."
+    echo "FFmpeg not available."
     exit 1
 fi
 
